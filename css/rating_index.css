@@ -1,0 +1,31 @@
+.google-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cfc8c4;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+.google-rating-wrap {
+  margin-top: 24px;
+}
+
+.google-rating:hover {
+  border-color: #8a7469;
+  color: #fff;
+}
+.google-rating .stars {
+  color: #e7b84b;
+  letter-spacing: 2px;
+}
+.google-rating strong {
+  color: #fff;
+  font-weight: 600;
+}

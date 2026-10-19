@@ -1,0 +1,43 @@
+/* ── FAQ ── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.faq-item {
+  border-bottom: 1px solid var(--snow-muted);
+  overflow: hidden;
+}
+.faq-item summary {
+  padding: 1.4rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color var(--transition);
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.2rem;
+  color: var(--taupe);
+  transition: transform var(--transition);
+}
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+.faq-item summary:hover {
+  color: var(--taupe);
+}
+.faq-item p {
+  padding: 0 0 1.4rem;
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.8;
+}

@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const gallery = document.getElementById("gallery");
 
-  const lightbox = document.getElementById("lightbox");
+  /* const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
-
+*/
   const path = gallery.dataset.path;
   const max = 30;
 
@@ -19,19 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
     img.onerror = () => {
       img.remove();
     };
-
+    /*
     // ouverture lightbox
     img.addEventListener("click", () => {
       lightboxImg.src = src;
       lightbox.classList.add("active");
     });
-
+*/
     gallery.appendChild(img);
   }
 
   // ── FERMETURE LIGHTBOX ──
-  lightbox.addEventListener("click", () => {
+  /* lightbox.addEventListener("click", () => {
     lightbox.classList.remove("active");
     lightboxImg.src = "";
-  });
+  });*/
 });

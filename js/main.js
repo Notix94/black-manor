@@ -10,7 +10,15 @@ if (burger && navLinks) {
     burger.classList.toggle('active');
   });
 }
+document.querySelectorAll('.reviews-carousel').forEach(carousel => {
+  const track = carousel.querySelector('.review-track');
+  const prev = carousel.querySelector('.review-arrow.prev');
+  const next = carousel.querySelector('.review-arrow.next');
+  const scrollAmount = () => track.querySelector('.review-img').offsetWidth + 20;
 
+  prev.addEventListener('click', () => track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
+});
 // Dropdown mobile
 document.querySelectorAll('.dropdown > a').forEach(link => {
   link.addEventListener('click', (e) => {
@@ -38,43 +46,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ── Formulaire Projet (AJAX) ──
-const projectForm = document.getElementById('projectForm');
-const feedback = document.getElementById('formFeedback');
-
-if (projectForm) {
-  projectForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = projectForm.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    btn.textContent = 'Envoi en cours…';
-
-    const formData = new FormData(projectForm);
-
-    try {
-      const res = await fetch('php/send-project.php', {
-        method: 'POST',
-        body: formData
-      });
-      const data = await res.json();
-
-      if (data.success) {
-        feedback.textContent = '✓ Votre projet a bien été envoyé ! Nous vous répondons sous 48h.';
-        feedback.className = 'form-feedback success';
-        projectForm.reset();
-      } else {
-        throw new Error(data.message || 'Erreur inconnue');
-      }
-    } catch (err) {
-      feedback.textContent = '✗ Une erreur est survenue : ' + err.message + '. Contactez-nous directement par email.';
-      feedback.className = 'form-feedback error';
-    } finally {
-      btn.disabled = false;
-      btn.textContent = 'Envoyer mon projet →';
-      feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-  });
-}
 
 // ── Animation au scroll (Intersection Observer) ──
 const animateOnScroll = (entries, observer) => {

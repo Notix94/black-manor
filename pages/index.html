@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Black Manor — Studio de Tatouage</title>
     <link rel="stylesheet" href="../css/accueil.css" />
+    <link rel="stylesheet" href="../css/rating_index.css" />
+    <link rel="stylesheet" href="../css/faq.css" />
   </head>
   <body>
     <!-- NAVIGATION -->
@@ -19,36 +21,26 @@
         </button>
         <ul class="nav-links" id="navLinks">
           <li><a href="shop.html">Shop</a></li>
-          <li class="dropdown">
+          <li>
             <a href="artistes.html"
-              >Les Tatoueurs <span class="arrow">▾</span></a
-            >
+              >Les Tatoueurs <span class="arrow"></span
+            ></a>
           </li>
-          <li class="dropdown">
+          <li>
             <a href="tats_esthetique.html"
-              >Tatouage Esthétique <span class="arrow">▾</span></a
-            >
-            <ul class="dropdown-menu">
-              <li>
-                <a href="#candy-lips"
-                  >Candy Lips <span class="badge">Bientôt</span></a
-                >
-              </li>
-              <li>
-                <a href="#taches"
-                  >Taches de Rousseurs <span class="badge">Bientôt</span></a
-                >
-              </li>
-              <li>
-                <a href="#grains"
-                  >Grains de Beauté <span class="badge">Bientôt</span></a
-                >
-              </li>
-            </ul>
+              >Tatouage Esthétique <span class="arrow"></span
+            ></a>
           </li>
           <li><a href="shopping.html">Shopping</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="projet.html" class="nav-cta">Votre Projet</a></li>
+          <li>
+            <a
+              href="https://docs.google.com/forms/d/15QUQzQfMN9fujczWWhRgRu3iLxSu_pU35bTiFHL40kU/viewform
+"
+              class="nav-cta"
+              >Votre Projet</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -56,17 +48,51 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-bg"></div>
+      <div class="hero-image">
+        <img src="../img/img_ex.png" alt="Tatouage Black Manor" />
+      </div>
       <div class="hero-content">
-        <p class="hero-sub">Studio de Tatouage &amp; Fine Line</p>
+        <p class="hero-sub">Studio de Tatouage</p>
         <h1 class="hero-title">BLACK MANOR</h1>
         <p class="hero-tagline">
           L'art du tatouage au service de votre histoire.
         </p>
-        <a href="#projet" class="btn-primary">Déposer mon projet</a>
-      </div>
-      <div class="hero-scroll">Défiler ↓</div>
-    </section>
+        <a
+          href="https://docs.google.com/forms/d/15QUQzQfMN9fujczWWhRgRu3iLxSu_pU35bTiFHL40kU/viewform"
+          class="btn-primary"
+          >Déposer mon projet</a
+        >
 
+        <div class="google-rating-wrap"></div>
+        <!-- NOTE GOOGLE -->
+        <a
+          href="shop.html"
+          class="google-rating"
+          aria-label="Note Google : 4,9 sur 5, 120 avis"
+        >
+          <svg viewBox="0 0 48 48" width="18" height="18" aria-hidden="true">
+            <path
+              fill="#EA4335"
+              d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.9 2.4 30.4 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"
+            />
+            <path
+              fill="#4285F4"
+              d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"
+            />
+            <path
+              fill="#FBBC05"
+              d="M10.5 28.7c-.5-1.5-.8-3-.8-4.7s.3-3.2.8-4.7l-7.9-6.1C.9 16.5 0 20.1 0 24s.9 7.5 2.6 10.8l7.9-6.1z"
+            />
+            <path
+              fill="#34A853"
+              d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"
+            />
+          </svg>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="score"><strong>4,9</strong>/5 · 120 avis Google</span>
+        </a>
+      </div>
+    </section>
     <!-- FAQ -->
     <section class="section" id="faq">
       <div class="container container-narrow">
@@ -78,11 +104,8 @@
           <details class="faq-item">
             <summary>Comment prendre rendez-vous ?</summary>
             <p>
-              Pour prendre rendez-vous, remplissez notre formulaire projet
-              ci-dessous ou contactez-nous par email à
-              <a href="mailto:blackmanorttt@gmail.com"
-                >blackmanorttt@gmail.com</a
-              >. Nos artistes vous répondront sous 48h.
+              Pour prendre rendez-vous, remplissez notre formulaire projet sur
+              le lien "Votre Projet".
             </p>
           </details>
 
@@ -109,7 +132,7 @@
             <p>
               Les tarifs varient selon la taille, la complexité et l'artiste
               choisi. Contactez-nous via le formulaire projet pour obtenir une
-              estimation personnalisée.
+              estimation personnalisée. (Prix Minimum 90e retouche incluse)
             </p>
           </details>
 
@@ -126,268 +149,21 @@
             <summary>Le tatouage esthétique est-il disponible ?</summary>
             <p>
               Nos prestations esthétiques (Candy Lips, Taches de Rousseur,
-              Grains de Beauté) seront disponibles prochainement. Inscrivez-vous
-              à notre newsletter ou suivez-nous sur Instagram pour être
-              informé(e) en avant-première.
+              Grains de Beauté) seront disponibles prochainement. suivez-nous
+              sur Instagram pour être informé(e) en avant-première.
             </p>
           </details>
 
           <details class="faq-item">
             <summary>Quels styles pratiquez-vous ?</summary>
             <p>
-              Le Black Manor est spécialisé en Fine Line, réalisme, projets
-              personnalisés et tatouage géométrique. Nos artistes sont ouverts à
-              de nombreux styles — partagez-nous votre vision dans le formulaire
-              projet.
+              Nous sommes polyvalent spécialisés en Fine Line, Black Work,
+              Japonais, Réalisme,Pop Culture et projets personnalisés. Nos
+              artistes sont ouverts à de nombreux styles — partagez-nous votre
+              vision dans le formulaire projet.
             </p>
           </details>
         </div>
-      </div>
-    </section>
-
-    <!-- FORMULAIRE PROJET -->
-    <section class="section section-dark" id="projet">
-      <div class="container container-narrow">
-        <div class="section-header light">
-          <span class="label">Votre Vision</span>
-          <h2>Déposer un Projet</h2>
-          <p class="section-intro" style="color: #c5b8ae">
-            Remplissez ce formulaire en détail pour que nos artistes puissent
-            vous proposer le projet qui vous correspond parfaitement.
-          </p>
-        </div>
-
-        <form
-          class="project-form"
-          action="php/send-project.php"
-          method="POST"
-          enctype="multipart/form-data"
-          id="projectForm"
-        >
-          <!-- INFOS PERSONNELLES -->
-          <fieldset>
-            <legend>Vos coordonnées</legend>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="prenom">Prénom *</label>
-                <input
-                  type="text"
-                  id="prenom"
-                  name="prenom"
-                  required
-                  placeholder="Votre prénom"
-                />
-              </div>
-              <div class="form-group">
-                <label for="nom">Nom *</label>
-                <input
-                  type="text"
-                  id="nom"
-                  name="nom"
-                  required
-                  placeholder="Votre nom"
-                />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email *</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  placeholder="votre@email.com"
-                />
-              </div>
-              <div class="form-group">
-                <label for="telephone">Téléphone</label>
-                <input
-                  type="tel"
-                  id="telephone"
-                  name="telephone"
-                  placeholder="+33 6 00 00 00 00"
-                />
-              </div>
-            </div>
-          </fieldset>
-
-          <!-- PROJET -->
-          <fieldset>
-            <legend>Votre projet de tatouage</legend>
-
-            <div class="form-group">
-              <label for="artiste">Artiste souhaité</label>
-              <select id="artiste" name="artiste">
-                <option value="">Pas de préférence</option>
-                <option value="artiste-1">lahyenettt</option>
-                <option value="artiste-2">nuage_noir</option>
-                <option value="artiste-3">Brendan</option>
-              </select>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="style">Style souhaité *</label>
-                <select id="style" name="style" required>
-                  <option value="">— Sélectionner —</option>
-                  <option value="fine-line">Fine Line</option>
-                  <option value="realisme">Réalisme</option>
-                  <option value="geometrique">Géométrique</option>
-                  <option value="dotwork">Dotwork</option>
-                  <option value="minimaliste">Minimaliste</option>
-                  <option value="autre">Autre / Je ne sais pas encore</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="zone">Zone du corps *</label>
-                <input
-                  type="text"
-                  id="zone"
-                  name="zone"
-                  required
-                  placeholder="Ex : avant-bras intérieur"
-                />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="taille">Taille approximative *</label>
-                <select id="taille" name="taille" required>
-                  <option value="">— Sélectionner —</option>
-                  <option value="xs">XS — moins de 5 cm</option>
-                  <option value="s">S — 5 à 10 cm</option>
-                  <option value="m">M — 10 à 15 cm</option>
-                  <option value="l">L — 15 à 25 cm</option>
-                  <option value="xl">XL — plus de 25 cm</option>
-                  <option value="cover">Cover / Retouche</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="couleur">Couleur</label>
-                <select id="couleur" name="couleur">
-                  <option value="noir-gris">Noir &amp; Gris</option>
-                  <option value="couleur">Couleur</option>
-                  <option value="les-deux">Les deux / À discuter</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="description">Description du projet *</label>
-              <textarea
-                id="description"
-                name="description"
-                rows="6"
-                required
-                placeholder="Décrivez votre idée en détail : sujet, symbolique, ambiance, références que vous aimez... Plus vous êtes précis(e), mieux nos artistes pourront vous guider."
-              ></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="references">Photos de référence</label>
-              <div class="file-upload">
-                <input
-                  type="file"
-                  id="references"
-                  name="references[]"
-                  multiple
-                  accept="image/*,.pdf"
-                />
-                <label for="references" class="file-label">
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                  >
-                    <path
-                      d="M12 16V8m0 0-3 3m3-3 3 3M20 16.5A3.5 3.5 0 0016.5 20H7.5A3.5 3.5 0 014 16.5V7a3 3 0 013-3h5.5l5 5V16.5z"
-                    />
-                  </svg>
-                  Glisser vos images ici ou cliquer pour parcourir
-                </label>
-                <p class="file-hint">
-                  Formats acceptés : JPG, PNG, PDF — max. 10 Mo par fichier
-                </p>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="premiere-fois">Première fois ?</label>
-              <div class="radio-group">
-                <label class="radio-label"
-                  ><input type="radio" name="premiere-fois" value="oui" /> Oui,
-                  c'est mon premier tatouage</label
-                >
-                <label class="radio-label"
-                  ><input
-                    type="radio"
-                    name="premiere-fois"
-                    value="non"
-                    checked
-                  />
-                  Non, j'ai déjà des tatouages</label
-                >
-              </div>
-            </div>
-          </fieldset>
-
-          <!-- DISPONIBILITÉS -->
-          <fieldset>
-            <legend>Disponibilités</legend>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="disponibilite">Période souhaitée</label>
-                <input
-                  type="text"
-                  id="disponibilite"
-                  name="disponibilite"
-                  placeholder="Ex : à partir de mars, pas le lundi..."
-                />
-              </div>
-              <div class="form-group">
-                <label for="budget">Budget approximatif</label>
-                <select id="budget" name="budget">
-                  <option value="">Je ne sais pas</option>
-                  <option value="moins-150">Moins de 150 €</option>
-                  <option value="150-300">150 – 300 €</option>
-                  <option value="300-500">300 – 500 €</option>
-                  <option value="500-plus">Plus de 500 €</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="message">Informations complémentaires</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="3"
-                placeholder="Allergies, contraintes particulières, questions..."
-              ></textarea>
-            </div>
-          </fieldset>
-
-          <!-- RGPD -->
-          <div class="form-group form-check">
-            <label class="checkbox-label">
-              <input type="checkbox" name="rgpd" required />
-              J'accepte que mes données soient utilisées par Black Manor pour
-              traiter ma demande. Aucune donnée ne sera transmise à des tiers.
-            </label>
-          </div>
-
-          <div class="form-submit">
-            <button type="submit" class="btn-primary btn-large">
-              Envoyer mon projet →
-            </button>
-          </div>
-
-          <div class="form-feedback" id="formFeedback"></div>
-        </form>
       </div>
     </section>
 
@@ -396,7 +172,7 @@
       <div class="container footer-grid">
         <div class="footer-brand">
           <p class="logo-text">BLACK MANOR</p>
-          <p>Studio de Tatouage &amp; Fine Line</p>
+          <p>Studio de Tatouage</p>
         </div>
         <div class="footer-links">
           <h4>Navigation</h4>
@@ -406,17 +182,22 @@
             <li><a href="#esthetique">Tatouage Esthétique</a></li>
             <li><a href="#shopping">Shopping</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#projet">Votre Projet</a></li>
+            <li>
+              <a
+                href="https://docs.google.com/forms/d/15QUQzQfMN9fujczWWhRgRu3iLxSu_pU35bTiFHL40kU/viewform"
+                >Votre Projet</a
+              >
+            </li>
           </ul>
         </div>
         <div class="footer-contact">
           <h4>Contact</h4>
           <p>
-            <a href="mailto:blackmanorttt@gmail.com">blackmanorttt@gmail.com</a>
+            <a>Tel: <strong>02 98 54 34 67</strong></a>
           </p>
           <div class="social-links">
             <a
-              href="https://instagram.com/blackmanortattoo"
+              href="https://instagram.com/blackmanorttt"
               target="_blank"
               rel="noopener"
               >Instagram</a
@@ -427,11 +208,11 @@
       <div class="footer-bottom">
         <p>
           &copy; 2025 Black Manor. Tous droits réservés. —
-          <a href="#">Mentions légales</a>
+          <a href="">Mentions légales</a>
         </p>
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

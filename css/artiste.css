@@ -1,0 +1,234 @@
+/* ── ARTISTS ── */
+
+/* Prévisualisation tatouages */
+
+.tattoo-preview {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.tattoo-preview img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid rgba(138, 117, 106, 0.15);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.tattoo-preview img:hover {
+  transform: scale(1.08);
+  border-color: var(--taupe);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+/* Boutons */
+.artist-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.btn-gallery {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--taupe);
+  color: var(--snow);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all var(--transition);
+}
+
+.btn-gallery:hover {
+  background: var(--deep-mocha);
+  opacity: 1;
+}
+.artists-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.artist-card {
+  display: grid;
+  grid-template-columns: 140px 1fr 260px;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(138, 117, 106, 0.15);
+}
+.artist-card:hover {
+  border-color: rgba(138, 117, 106, 0.4);
+}
+.artist-photo {
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+}
+
+.artist-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.artist-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.artist-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--snow);
+  margin-bottom: 0.25rem;
+}
+.artist-specialty {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--taupe);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.artist-bio {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: rgba(247, 240, 240, 0.7);
+  margin-bottom: 1rem;
+}
+.artist-buttons {
+  margin-top: 1.2rem; /* <-- boutons plus bas */
+  display: flex;
+  gap: 10px;
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+  .artist-card {
+    grid-template-columns: 1fr;
+  }
+  .artist-photo {
+    max-width: 160px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-brand {
+    grid-column: 1/-1;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--shadow-grey);
+    padding: 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(138, 117, 106, 0.2);
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .burger {
+    display: flex;
+  }
+  .dropdown-menu {
+    position: static;
+    display: none !important;
+    padding-left: 1rem;
+  }
+  .dropdown.open .dropdown-menu {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: 5rem 0;
+  }
+  .artist-card {
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+  }
+
+  .artist-photo {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+    border-radius: 50%; /* look plus soigné qu'un carré brut */
+  }
+
+  .artist-info {
+    align-items: center;
+  }
+
+  .artist-bio {
+    max-width: 40ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tattoo-preview {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .tattoo-preview img {
+    width: 42%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .artist-actions,
+  .artist-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .btn-gallery {
+    flex: 1;
+    justify-content: center;
+  }
+}
