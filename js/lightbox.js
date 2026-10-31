@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   previews.forEach((img) => {
     img.addEventListener("click", () => {
-      lightboxImg.src = img.src;
+      lightboxImg.src = img.src.replace("/mini/", "/grand/");
       lightbox.classList.add("active");
     });
   });
